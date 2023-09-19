@@ -4,7 +4,7 @@ import DadosUsuario from "./DadosUsuarios";
 import DadosEntrega from "./DadosEntrega";
 import { Step, StepLabel, Stepper, Typography } from "@mui/material";
 
-function FormularioCadastro({ aoEnviar, validarCPF }) {
+function FormularioCadastro({ aoEnviar }) {
 
     const [etapaAtual, setEtapaAtual] = useState(0);
     const [dadosColetatos, setDados] = useState("");
@@ -17,7 +17,7 @@ function FormularioCadastro({ aoEnviar, validarCPF }) {
 
     const formularios = [
         <DadosUsuario aoEnviar={coletarDados} />,
-        <DadosPessoais aoEnviar={coletarDados} validarCPF={validarCPF} />,
+        <DadosPessoais aoEnviar={coletarDados} />,
         <DadosEntrega aoEnviar={coletarDados} />,
         <Typography variant="h5">Obrigado Pelo Cadastro!</Typography>
     ];
